@@ -11,7 +11,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}"/>
-    <link rel="stylesheet" href="assets/css/custom_style.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/custom_style.css' %}"/>
     <noscript>
         <link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}"/>
     </noscript>
@@ -23,7 +23,7 @@
     <div class="languageButton">
          <ul class="listStyle">
              <li class="firstItem">
-                 <a class="AnchorLink" href="./english/index.html">English</a>
+                 <a class="AnchorLink" href=".templates/english/indexEng.html">English</a>
              </li>
              <li class="secondItem">
                  <a class="AnchorLink" href="#">French</a>
@@ -111,6 +111,8 @@
             <div>
                 <h2 class="major">Déjà un compte chez nous ?</h2>
                 <form method="post" action="#">
+                    {% csrf_token %}
+                    {{ form }}
                     <div class="fields" id="form-connexion">
                         <div class="field">
                             <label for="email">E-mail</label>
@@ -131,6 +133,8 @@
             <div>
                 <h2 class="major">Créer un compte<br/></h2>
                 <form method="post" action="#">
+                    {% csrf_token %}
+                    {{ form }}
                     <div class="fields" id="form-inscription">
                         <div class="field half">
                             <label for="nom">Nom</label>
@@ -165,6 +169,8 @@
         <article id="contact">
             <h2 class="major">Contact</h2>
             <form method="post" action="#">
+                {% csrf_token %}
+                {{ form }}
                 <div class="fields">
                     <div class="field half">
                         <label for="name">Name</label>
