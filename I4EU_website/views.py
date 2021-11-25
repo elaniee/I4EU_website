@@ -9,7 +9,7 @@ def index(request):
     return render(request, 'index.html', {})
 
 def indexEng(request):
-    return render(request, 'indexEng.html', {})
+    return render(request, 'english/indexEng.html', {})
 
 """def get_name(request):
     print('ok')
