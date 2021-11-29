@@ -61,7 +61,7 @@
         <!-- Qui sommes-nous? -->
         <article id="intro">
             <h2 class="major">Université de Bordeaux</h2>
-            <span class="image main"><img src="images/ubdx.png" alt=""/></span>
+            <span class="image main"><img src="{% static 'images/ubdx.png' %}" alt=""/></span>
             <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue.
                 Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus
                 nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome
@@ -78,7 +78,7 @@
         <!-- L'usine -->
         <article id="work">
             <h2 class="major">L'usine</h2>
-            <span class="image main"><img src="images/pic02.jpg" alt=""/></span>
+            <span class="image main"><img src="{% static 'images/pic02.jpg' %}" alt=""/></span>
             <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac.
                 Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin
                 mauris nec lorem luctus ultrices.</p>
@@ -93,6 +93,8 @@
             <div>
                 <h2 class="major">Password recovery  </h2>
                 <form method="post" action="#">
+                {% csrf_token %}
+                {{ form }}
                     <div class="fields" id="form-connexion">
                         <div class="field">
                             <label for="forgottenEmail">E-mail</label>
@@ -109,6 +111,8 @@
             <div>
                 <h2 class="major">Already an account with us  ?</h2>
                 <form method="post" action="#">
+                {% csrf_token %}
+                {{ form }}
                     <div class="fields" id="form-connexion">
                         <div class="field">
                             <label for="email">E-mail</label>
@@ -129,6 +133,8 @@
             <div>
                 <h2 class="major">create an account<br/></h2>
                 <form method="post" action="#">
+                {% csrf_token %}
+                {{ form }}
                     <div class="fields" id="form-inscription">
                         <div class="field half">
                             <label for="nom">surname</label>
@@ -163,6 +169,8 @@
         <article id="contact">
             <h2 class="major">Contact</h2>
             <form method="post" action="#">
+            {% csrf_token %}
+            {{ form }}
                 <div class="fields">
                     <div class="field half">
                         <label for="name">Name</label>

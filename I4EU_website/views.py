@@ -8,6 +8,9 @@ def index(request):
 def indexEng(request):
     return render(request, 'english/indexEng.html', {})
 
+def indexCon(request):
+    return render(request, 'connexion/indexCon.html', {})
+
 """def get_name(request):
     print('ok')
     # if this is a POST request we need to process the form data

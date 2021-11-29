@@ -43,9 +43,7 @@
         <div class="content">
             <div class="inner">
                 <h1>Bienvenue</h1>
-                <p>Nous sommes l'usine connectée de l'Université de Bordeaux <br/> Ce projet a pu se concrétiser dans le
-                    cadre du projet I4EU <br/>Pour plus d'informations, rendez-vous sur le site officiel <a
-                            href="https://www.i4eu-pro.eu">ici</a><br/>
+                <p>Nous sommes l'usine connectée de l'Université de Bordeaux <br/> Ce projet a pu se concrétiser dans le cadre du projet I4EU <br/>Pour plus d'informations, rendez-vous sur le site officiel <a href="https://www.i4eu-pro.eu">ici</a><br/>
             </div>
         </div>
         <nav>
@@ -127,10 +125,14 @@
                             <input type="text" name="mdp" id="mdp"/>
                         </div>
                         <div> Il faut que ca vérifie dans la base de donnée que le compte existe bien</div>
-                        <div class="actions">
-                            <input type="submit" value="Connexion" class=" primary"
-                                   style="margin-left : 40%; margin-top : 5px"/>
-                        </div>
+                        
+                        <input type="button" value="Connexion" class="button_active" onclick=location.href="{% url 'indexCon' %}#indexCon" />
+                        
+                      <!-- <button type="button">
+                            <a  name="indexCon" data-hover="Connexion" href="{% url 'indexCon' %}#indexCon" > Connexion
+                            </a>
+                        </button>
+                      -->  
                     </div>
                 </form>
             </div>

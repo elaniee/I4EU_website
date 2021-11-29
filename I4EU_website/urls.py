@@ -21,6 +21,7 @@ urlpatterns = [
    path('admin/', admin.site.urls),
    ##path('templates/', include('templates.urls')),
    path('',views.index,name='index'),
-   path('english/', views.indexEng, name='indexEng')
+   path('english/', views.indexEng, name='indexEng'),
+   path('connexion/', views.indexCon, name='indexCon')
 ]
 
